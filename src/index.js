@@ -14,7 +14,7 @@ app.use("/client", express.static("client"))
 app.use(bodyParser.json())
 app.set('view engine', "ejs")
 
-const apiFiles = fs.readdirSync('./src/v1').filter(file => file.endsWith('.js'));
+const apiFiles = fs.readdirSync('../src/v1').filter(file => file.endsWith('.js'));
 const api = new collection()
 const realtime = require("./realtime")
 for (const file of apiFiles) {
